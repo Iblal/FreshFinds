@@ -1,4 +1,5 @@
 using FluentValidation;
+using FreshFinds.Product.API.Data;
 using FreshFinds.Product.API.DTOs;
 using FreshFinds.Product.API.Validations;
 using System;
@@ -19,5 +20,17 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Lifetime.ApplicationStarted.Register(async () =>
+{
+    try
+    {
+        await DbInitializer.InitDb(app);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e);
+    }
+});
 
 app.Run();

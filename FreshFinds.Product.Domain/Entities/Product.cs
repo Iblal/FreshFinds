@@ -1,6 +1,14 @@
-﻿namespace FreshFinds.Product.Domain.Entities
+﻿using MongoDB.Entities;
+
+namespace FreshFinds.Product.Domain.Entities
 {
-    internal class Product
+    public sealed class Product : Entity
     {
+        public Product(string productName) 
+        {
+            Name = productName;
+        }
+
+        public string Name { get;  private set; }
     }
 }

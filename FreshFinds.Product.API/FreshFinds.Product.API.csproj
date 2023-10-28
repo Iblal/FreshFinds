@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="MongoDB.Entities" Version="22.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FreshFinds.Product.Domain\FreshFinds.Product.Domain.csproj" />
   </ItemGroup>
 
 </Project>
