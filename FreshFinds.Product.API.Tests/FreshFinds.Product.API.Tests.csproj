@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FreshFinds.Product.API\FreshFinds.Product.API.csproj" />
+  </ItemGroup>
+
 </Project>

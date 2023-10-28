@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreshFinds.Product.API", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreshFinds.Product.API.Tests", "FreshFinds.Product.API.Tests\FreshFinds.Product.API.Tests.csproj", "{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreshFinds.Product.Domain", "FreshFinds.Product.Domain\FreshFinds.Product.Domain.csproj", "{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
