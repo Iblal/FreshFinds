@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreshFinds.Product.API", "FreshFinds.Product.API\FreshFinds.Product.API.csproj", "{3ECEA2C3-9948-4BF2-B16A-607CB6A73304}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreshFinds.Product.API.Tests", "FreshFinds.Product.API.Tests\FreshFinds.Product.API.Tests.csproj", "{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3ECEA2C3-9948-4BF2-B16A-607CB6A73304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ECEA2C3-9948-4BF2-B16A-607CB6A73304}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ECEA2C3-9948-4BF2-B16A-607CB6A73304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
