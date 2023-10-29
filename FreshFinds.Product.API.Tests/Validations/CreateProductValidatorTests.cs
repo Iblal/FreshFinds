@@ -1,6 +1,6 @@
 ﻿using FluentValidation.TestHelper;
-using FreshFinds.Product.API.DTOs;
-using FreshFinds.Product.API.Validations;
+using ProductService.DTOs;
+using ProductService.Validations;
 
 namespace FreshFinds.Product.API.Tests.Validations
 {

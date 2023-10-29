@@ -1,7 +1,8 @@
 ﻿using MongoDB.Driver;
 using MongoDB.Entities;
+using ProductService.Entities;
 
-namespace FreshFinds.Product.API.Data
+namespace ProductService.Data
 {
     public class DbInitializer
     {
@@ -10,7 +11,7 @@ namespace FreshFinds.Product.API.Data
             await DB.InitAsync("Product", MongoClientSettings
                 .FromConnectionString("mongodb://root:mongopw@localhost"));
 
-            await DB.Index<Domain.Entities.Product>()
+            await DB.Index<Product>()
                 .Key(x => x.Name, KeyType.Text)
                 .CreateAsync();
         }

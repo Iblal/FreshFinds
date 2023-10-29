@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using FreshFinds.Product.API.DTOs;
+using ProductService.DTOs;
 
-namespace FreshFinds.Product.API.Validations
+namespace ProductService.Validations
 {
     public sealed class CreateProductValidator : AbstractValidator<CreateProductDto>
     {

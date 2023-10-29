@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreshFinds.Product.API", "FreshFinds.Product.API\FreshFinds.Product.API.csproj", "{3ECEA2C3-9948-4BF2-B16A-607CB6A73304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService", "FreshFinds.Product.API\ProductService.csproj", "{3ECEA2C3-9948-4BF2-B16A-607CB6A73304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreshFinds.Product.API.Tests", "FreshFinds.Product.API.Tests\FreshFinds.Product.API.Tests.csproj", "{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreshFinds.Product.Domain", "FreshFinds.Product.Domain\FreshFinds.Product.Domain.csproj", "{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService.Tests", "FreshFinds.Product.API.Tests\ProductService.Tests.csproj", "{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0D4BBF-D83B-4FB2-A78E-B088B9A8413B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDA2FF0F-66E7-422F-8A32-5755268C9D7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

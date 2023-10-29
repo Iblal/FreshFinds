@@ -1,23 +1,26 @@
 using FluentValidation;
-using FreshFinds.Product.API.Data;
-using FreshFinds.Product.API.DTOs;
-using FreshFinds.Product.API.Validations;
-using System;
+using ProductService.Data;
+using ProductService.DTOs;
+using ProductService.Validations;
+using ProductService.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
 builder.Services.AddScoped<IValidator<CreateProductDto>, CreateProductValidator>();
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

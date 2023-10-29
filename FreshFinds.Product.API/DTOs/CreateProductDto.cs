@@ -1,4 +1,4 @@
-﻿namespace FreshFinds.Product.API.DTOs
+﻿namespace ProductService.DTOs
 {
     public class CreateProductDto
     {
