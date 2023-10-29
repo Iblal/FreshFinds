@@ -13,6 +13,7 @@ namespace ProductService.Data
 
             await DB.Index<Product>()
                 .Key(x => x.Name, KeyType.Text)
+                .Key(x => x.Description, KeyType.Text)
                 .CreateAsync();
         }
     }
