@@ -7,7 +7,7 @@ namespace OrderService.Validations
     {
         public CreateOrderValidator()
         {
-            RuleFor(order => order.CustomerId).NotNull().NotEmpty();
+            RuleFor(order => order.CustomerId).NotNull().NotEmpty().Length(36);
 
             RuleFor(order => order.Items).NotNull().NotEmpty();
         }
