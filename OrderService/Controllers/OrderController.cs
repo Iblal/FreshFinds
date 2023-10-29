@@ -9,11 +9,11 @@ namespace OrderService.Controllers
     {
         public OrderController() { }
 
-        //[HttpPost]
-        //public async Task<ActionResult> CreateOrder(CreateOrderDto createOrderDto)
-        //{
+        [HttpPost]
+        public async Task<ActionResult> CreateOrder(CreateOrderDto createOrderDto)
+        {
 
-        //}
+        }
 
 
     }
