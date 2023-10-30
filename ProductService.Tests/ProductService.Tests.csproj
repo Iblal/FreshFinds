@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FreshFinds.Product.API\ProductService.csproj" />
+    <ProjectReference Include="..\ProductService\ProductService.csproj" />
   </ItemGroup>
 
 </Project>
