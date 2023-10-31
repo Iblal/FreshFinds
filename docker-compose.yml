@@ -16,3 +16,9 @@ services:
       - SA_PASSWORD=MyP@ssw0rd123
     ports:
       - 1433:1433
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672

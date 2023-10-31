@@ -1,6 +1,4 @@
-﻿using Azure.Core.Pipeline;
-
-namespace OrderService.DTOs
+﻿namespace OrderService.DTOs
 {
     public class OrderDto
     {

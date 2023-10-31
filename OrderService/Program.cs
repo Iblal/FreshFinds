@@ -1,5 +1,7 @@
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using OrderService.Data;
+using OrderService.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,17 @@ builder.Services.AddControllers();
 var connectionString = builder.Configuration.GetValue<string>("ConnectionString");
 
 builder.Services.AddDbContext<OrderDatabaseContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) => {
+        cfg.ConfigureEndpoints(context);
+    });
+});
 
 
 var app = builder.Build();
