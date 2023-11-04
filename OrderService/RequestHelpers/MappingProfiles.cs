@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Contracts;
 using OrderService.DTOs;
 using OrderService.Entities;
 
@@ -17,6 +18,9 @@ namespace OrderService.RequestHelpers
             CreateMap<Order, OrderDto>()
                 .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.Items));
             CreateMap<OrderItem, OrderItemDto>();
+
+            //Map for Items message
+            CreateMap<OrderItemDto, Item>();
         }
     }
 

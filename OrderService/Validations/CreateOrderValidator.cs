@@ -3,7 +3,7 @@ using OrderService.DTOs;
 
 namespace OrderService.Validations
 {
-    public class CreateOrderValidator : AbstractValidator<CreateOrderDto>
+    public sealed class CreateOrderValidator : AbstractValidator<CreateOrderDto>
     {
         public CreateOrderValidator()
         {
