@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Contracts;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -43,9 +44,12 @@ namespace OrderService.Controllers
 
                 ProductAvailabilityHelper.CheckProductsAvailability(productResults.Result);
 
+                await _publishEndpoint.Publish(_mapper.Map<OrderCreated>(newOrder));
+
                 var result = await _repo.SaveChangesAsync();
 
                 if (!result) throw new DbUpdateException("Could not persist changes");
+
 
                 return Ok("Order created successfully");
             }

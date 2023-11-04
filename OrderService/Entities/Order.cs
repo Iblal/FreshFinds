@@ -9,7 +9,7 @@ namespace OrderService.Entities
         {
         }
 
-        public string CustomerId { get; set; }
+        public Guid CustomerId { get; set; }
 
         public List<OrderItem> Items { get; set; }
     }

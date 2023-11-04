@@ -16,11 +16,17 @@ namespace OrderService.RequestHelpers
 
             //Maps for OrderDTO
             CreateMap<Order, OrderDto>()
-                .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.Items));
+                .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.Items))
+                .ForMember(dest => dest.OrderId, opt => opt.MapFrom(src => src.Id));
             CreateMap<OrderItem, OrderItemDto>();
 
             //Map for Items message
             CreateMap<OrderItemDto, Item>();
+
+            //Map a new order to OrderCreated event
+            CreateMap<OrderDto, OrderCreated>()
+                .ForMember(dest => dest.OrderedProducts, opt => opt.MapFrom(src => src.Items));
+            CreateMap<OrderItemDto, OrderedProduct>();
         }
     }
 

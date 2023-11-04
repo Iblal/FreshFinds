@@ -22,6 +22,14 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddMassTransit(x =>
 {
+    x.AddEntityFrameworkOutbox<OrderDatabaseContext>(o =>
+    {
+        o.QueryDelay = TimeSpan.FromSeconds(10);
+
+        o.UseSqlServer();
+        o.UseBusOutbox();
+    });
+
     x.UsingRabbitMq((context, cfg) => {
         cfg.ConfigureEndpoints(context);
     });

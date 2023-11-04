@@ -24,7 +24,7 @@ namespace OrderService.Data.Repositories
         {
             return await _context.Orders
             .ProjectTo<OrderDto>(_mapper.ConfigurationProvider)
-            .FirstOrDefaultAsync(x => x.Id == id);
+            .FirstOrDefaultAsync(x => x.OrderId == id);
         }
 
         public async Task<bool> SaveChangesAsync()

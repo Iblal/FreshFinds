@@ -21,10 +21,26 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumersFromNamespaceContaining<GetProductsAvailabilityConsumer>();
+    x.AddConsumersFromNamespaceContaining<OrderCreatedConsumer>();
 
     x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("product", false));
 
     x.UsingRabbitMq((context, cfg) => {
+
+        cfg.ReceiveEndpoint("product-order-created", e =>
+        {
+            e.UseMessageRetry(r => r.Interval(5, 5));
+
+            e.ConfigureConsumer<OrderCreatedConsumer>(context);
+        });
+
+        cfg.ReceiveEndpoint("product-get-products-availability", e =>
+        {
+            e.UseMessageRetry(r => r.Interval(5, 5));
+
+            e.ConfigureConsumer<GetProductsAvailabilityConsumer>(context);
+        });
+
         cfg.ConfigureEndpoints(context);
     });
 });
