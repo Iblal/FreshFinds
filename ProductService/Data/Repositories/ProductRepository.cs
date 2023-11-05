@@ -17,5 +17,16 @@ namespace ProductService.Data.Repositories
             return product;
         }
 
+        public async Task ReduceStock(string id, int quantity)
+        {
+            var product = await GetProduct(id);
+
+            if (product != null)
+            {
+                product.Stock -= quantity;
+                await product.SaveAsync();
+            }
+        }
+
     }
 }

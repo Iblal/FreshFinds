@@ -8,14 +8,12 @@ namespace OrderService.Services
     public class ProductService : IProductService
     {
         private readonly IRequestClient<GetProductsAvailabilityRequest> _client;
-        private readonly IPublishEndpoint _publishEndpoint;
         private readonly IMapper _mapper;
 
-        public ProductService(IRequestClient<GetProductsAvailabilityRequest> client, IMapper mapper, IPublishEndpoint publishEndpoint)
+        public ProductService(IRequestClient<GetProductsAvailabilityRequest> client, IMapper mapper)
         {
             _client = client;
             _mapper = mapper;
-            _publishEndpoint = publishEndpoint;
         }
 
         public async Task<List<ProductAvailabilityResult>> GetProductsAvailabilityAsync(List<OrderItemDto> orderItems)

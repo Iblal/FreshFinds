@@ -7,5 +7,8 @@ namespace ProductService.Data.Repositories
         Task<Product?> GetProduct(string id);
 
         void CreateProduct(Product product);
+
+        Task ReduceStock(string id, int quantity);
+
     }
 }
