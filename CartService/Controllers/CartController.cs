@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StackExchange.Redis;
+using System.Text.Json;
 
 [Route("api/cart")]
 public class CartController : Controller
@@ -14,31 +15,53 @@ public class CartController : Controller
     }
 
     [HttpPost]
-    [Route("add")]
-    public IActionResult AddToCart(string userId, string productId, int quantity)
+    public IActionResult AddToCart([FromQuery] string userId, string productId, int quantity)
     {
-        // Implement adding products to the cart in Redis
-        // You can use userId as a key and a Redis Hash to store cart items
-        // Example: _database.HashSet(userId, productId, quantity);
-        return Ok();
+        try
+        {
+            // Use userId as the key and a Redis Hash to store cart items
+            _database.HashSet(userId, new HashEntry[] { new HashEntry(productId, quantity) });
+
+            return Ok("Product added to cart.");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest("Error: " + ex.Message);
+        }
     }
 
     [HttpGet]
-    [Route("get")]
-    public IActionResult GetCart(string userId)
+    public IActionResult GetCart([FromQuery] string userId)
     {
-        // Implement retrieving the cart from Redis and returning it as JSON
-        // Example: var cartItems = _database.HashGetAll(userId);
-        // You can serialize the cartItems to JSON and return it
-        return Ok();
+        try
+        {
+            // Retrieve the cart from Redis as a Hash
+            var cartItems = _database.HashGetAll(userId);
+
+            // Serialize the cartItems to JSON
+            var cartJson = JsonSerializer.Serialize(cartItems);
+
+            return Ok(cartJson);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest("Error: " + ex.Message);
+        }
     }
 
     [HttpPost]
-    [Route("remove")]
     public IActionResult RemoveFromCart(string userId, string productId)
     {
-        // Implement removing a product from the cart in Redis
-        // Example: _database.HashDelete(userId, productId);
-        return Ok();
+        try
+        {
+            // Remove a product from the cart in Redis
+            _database.HashDelete(userId, productId);
+
+            return Ok("Product removed from cart.");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest("Error: " + ex.Message);
+        }
     }
 }

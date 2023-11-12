@@ -4,13 +4,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+var redisConnection = builder.Configuration.GetValue<string>("Redis:ConnectionString");
+
+builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnection));
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
-
-var redisConnection = builder.Configuration.GetValue<string>("ConnectionString");
-
-builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnection));
 
 // Configure the HTTP request pipeline.
 

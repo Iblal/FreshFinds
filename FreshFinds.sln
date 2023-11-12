@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService.Tests", "Pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{AD3444A2-ACBC-4709-B2D3-B71D07372661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartService", "CartService\CartService.csproj", "{E7646446-08FF-49C8-B23C-C73EC9D56D8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartService", "CartService\CartService.csproj", "{E7646446-08FF-49C8-B23C-C73EC9D56D8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartServiceTests", "CartServiceTests\CartServiceTests.csproj", "{C64380D8-1DC5-48E9-8D85-B8B4B539A7AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartServiceTests", "CartServiceTests\CartServiceTests.csproj", "{C64380D8-1DC5-48E9-8D85-B8B4B539A7AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService", "..\Carsties\src\IdentityService\IdentityService.csproj", "{13F51309-C3DA-48F3-9EB1-E1081153C550}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{C64380D8-1DC5-48E9-8D85-B8B4B539A7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C64380D8-1DC5-48E9-8D85-B8B4B539A7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C64380D8-1DC5-48E9-8D85-B8B4B539A7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F51309-C3DA-48F3-9EB1-E1081153C550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F51309-C3DA-48F3-9EB1-E1081153C550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F51309-C3DA-48F3-9EB1-E1081153C550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F51309-C3DA-48F3-9EB1-E1081153C550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
