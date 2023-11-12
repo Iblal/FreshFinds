@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartServiceTests", "CartSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService", "IdentityService\IdentityService.csproj", "{6B0C102C-6A98-4963-938C-0335E940F18D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayService", "GatewayService\GatewayService.csproj", "{00E6878E-1D5C-4A3A-8C06-34101852B4B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{6B0C102C-6A98-4963-938C-0335E940F18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B0C102C-6A98-4963-938C-0335E940F18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B0C102C-6A98-4963-938C-0335E940F18D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E6878E-1D5C-4A3A-8C06-34101852B4B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E6878E-1D5C-4A3A-8C06-34101852B4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E6878E-1D5C-4A3A-8C06-34101852B4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E6878E-1D5C-4A3A-8C06-34101852B4B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
